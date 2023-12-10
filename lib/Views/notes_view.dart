@@ -34,16 +34,16 @@ class NotesView extends StatelessWidget {
           )
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(15.0),
-        child: Column(
-          children: [
-            CustomNoteItems(),
-          ],
-        ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) => CustomNoteItems(),
+              itemCount: 5,
+            ),
+          ),
+        ],
       ),
     );
   }
 }
-
-
