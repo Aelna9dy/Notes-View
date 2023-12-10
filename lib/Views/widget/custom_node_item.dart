@@ -8,6 +8,7 @@ class CustomNoteItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: const Color(0xffFFCC80),
         borderRadius: BorderRadius.circular(16),
