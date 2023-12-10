@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/Views/widget/custom_node_item.dart';
 
 class NotesView extends StatelessWidget {
   static const String routeName = "notes_view";
@@ -28,10 +29,21 @@ class NotesView extends StatelessWidget {
               size: 28,
             ),
           ),
-          const SizedBox(width: 10,)
+          const SizedBox(
+            width: 10,
+          )
         ],
       ),
-      body: Column(),
+      body: const Padding(
+        padding: EdgeInsets.all(15.0),
+        child: Column(
+          children: [
+            CustomNoteItems(),
+          ],
+        ),
+      ),
     );
   }
 }
+
+
