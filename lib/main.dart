@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: NotesView.routeName,
       routes: {
         NotesView.routeName:(context) => NotesView(),
-        EditNoteView.routeName:(context) => EditNoteView(),
+        EditNoteView.routeName:(context) => const EditNoteView(),
       },
     );
   }

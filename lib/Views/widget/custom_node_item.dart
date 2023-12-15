@@ -9,7 +9,7 @@ class CustomNoteItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         Navigator.popAndPushNamed(context, EditNoteView.routeName);
       },
       child: Container(
@@ -22,37 +22,26 @@ class CustomNoteItems extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      "Flutter tips",
-                      style: GoogleFonts.poppins(
-                        fontSize: 30,
-                        color: Colors.black,
-                      ),
-                    ),
-                    const Spacer(),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.delete,
-                        color: Colors.black,
-                        size: 35,
-                      ),
-                    ),
-                  ],
+            ListTile(
+              title: Text(
+                "Flutter tips",
+                style: GoogleFonts.poppins(
+                  fontSize: 24,
+                  color: Colors.black,
                 ),
-                Text(
-                  "Build your career with tharwat samy",
-                  style: GoogleFonts.poppins(
-                    fontSize: 26,
+              ),
+              subtitle: Text(
+                "Build your career with tharwat samy",
+                style: GoogleFonts.poppins(
+                    fontSize: 20,
                     color: Colors.black45,
-                  ),
                 ),
-              ],
+              ),
+              trailing: const Icon(
+                Icons.delete,
+                size: 30,
+                color: Colors.black,
+              ),
             ),
             Text(
               "May 21,2023",
