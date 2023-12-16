@@ -56,21 +56,3 @@ class CustomNoteItems extends StatelessWidget {
     );
   }
 }
-/*ListTile(
-            title: Text(
-              "Flutter tips",
-              style: TextStyle(
-                fontSize: 26,
-                color: Colors.black,
-              ),
-            ),
-            subtitle: Text(
-              "Build your career with tharwat samy",
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.black45,
-              ),
-            ),
-
-
-          ),*/
