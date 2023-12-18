@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/Models/note_model.dart';
+import 'package:notes_app/add_note_cubits/add_notes.dart';
 
 import '../widget/custom_text_field.dart';
 import 'custom_bottom.dart';
@@ -18,7 +21,9 @@ class _AddNoteFormStateState extends State<AddNoteFormState> {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context).size;
+    final mediaQuery = MediaQuery
+        .of(context)
+        .size;
     return Form(
       key: formKey,
       child: Column(
@@ -61,6 +66,14 @@ class _AddNoteFormStateState extends State<AddNoteFormState> {
               setState(() {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
+
+                  var noteModel = NoteModel(title: title!,
+                    subTitle: subTitle!,
+                    date: DateTime.now().toString(),
+                    color: Colors.blue.value,
+                  );
+
+                  BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
                 }
