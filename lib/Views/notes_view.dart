@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/Constant/constant.dart';
+import 'package:notes_app/Views/add_note/add_note_bottom_sheet.dart';
 import 'package:notes_app/Views/widget/Notes_list_item.dart';
-import 'package:notes_app/Views/widget/add_note_bottom_sheet.dart';
 
 class NotesView extends StatelessWidget {
   static const String routeName = "notes_view";

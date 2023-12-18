@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../edit_note_view.dart';
+import '../edit_note/edit_note_view.dart';
 
 class CustomNoteItems extends StatelessWidget {
   const CustomNoteItems({super.key});
