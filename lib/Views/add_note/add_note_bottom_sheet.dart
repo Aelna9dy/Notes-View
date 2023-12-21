@@ -9,11 +9,14 @@ class AddNoteBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return BlocProvider(
       create: (context) => AddNoteCubit(),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 10,
+        padding: EdgeInsets.only(
+          left: 10,
+          right: 10,
+          bottom: mediaQuery.viewInsets.bottom,
         ),
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
           listener: (context, state) {
