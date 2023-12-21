@@ -8,6 +8,7 @@ import 'package:notes_app/Views/widget/Notes_list_item.dart';
 class NotesView extends StatelessWidget {
   static const String routeName = "notes_view";
 
+  // @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(
