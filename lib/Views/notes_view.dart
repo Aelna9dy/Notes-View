@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/Constant/constant.dart';
+import 'package:notes_app/Cubit/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/Views/add_note/add_note_bottom_sheet.dart';
 import 'package:notes_app/Views/widget/Notes_list_item.dart';
 
@@ -50,12 +52,15 @@ class NotesView extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: const Column(
-        children: [
-          Expanded(
-            child: NotesListItem(),
-          ),
-        ],
+      body: BlocProvider(
+        create: (context) => NotesCubit(),
+        child: const Column(
+          children: [
+            Expanded(
+              child: NotesListItem(),
+            ),
+          ],
+        ),
       ),
     );
   }
